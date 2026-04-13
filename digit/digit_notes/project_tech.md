@@ -50,6 +50,8 @@ schema backend_pl
 - create workspace
 - Import collection - uzyc e-delivery.yml z ktorego importuje sie wszystko
 - Import globals - right menu - Globals.json
+  - authorityCtx - zmienna def. authority: ca-civ-1 albo ca-cri-1
+  - userlogin - user dla authority: civ1_all_1 albo cri1_all_1
 
 ## Intellij
 
