@@ -1,0 +1,81 @@
+
+placeOfBirth
+ .placeOfBirth(domain.getPlaceOfBirth().orElse(null))
+
+ .placeOfBirth(domain.getPlaceOfBirth().orElse(FcoPlaceOfBirthType.UNKNOWN.getValue()))
+========================
+
+FoAnexI - sekcja M,N - brakuje podanego wskazujacego na adres 
+CoAnexII - sekcja B2 podejrzana
+
+sr4dev - 
+
+TransmissionEntity 
+zapisywanie info o Authirity (ministerstw) (issuing/executing) ktore uzywamy, 
+Section A - > Issuing authority identifier
+Section M - Details of issuing authority - wiecej info potrzeba
+
+AuthorityId - techniczne id 
+EntityInfo - uzywany, zamiast CountryCode z AuthorityId 
+
+CoAnnexIIParameterBuilder - 
+
+Epoc - tez jest criminal
+encje t_civ_transmission_entity - to OK
+
+
+FcoLegalPersonParameterBuilderImpl
+62 - DEBUG 
+
+PERSON_POSITION_FIELD_NAMES 
+vvariable 
+ORDER_DIRECTED_AGAINST_PERSON_START
+ORDER_DIRECTED_AGAINST_PERSON_END
+{ORDER_DIRECTED_AGAINST_PERSON}
+
+Variable - pole skladane 
+
+DATA_SET
+AFFECTED_PERSON_LEGAL_PERSON
+Tutaj bedzie wrzucana wartosc posrodku, taka zlepka 
+<name></name> 
+
+L32 - orderDirectedAgainstPerson
+stringfy(FcoLegalPerson
+encodeAndWrapField
+
+Request - PUT FC C Update
+personOwningTheProperty
+
+dodac log - sprawdzic co przechowuje
+L66 - FcoLegal PersonParame - co jest w obiekcie orderDirectedAgainstPerson
+Tu dodac wiecej logowania -> log.info("legalPerson: )
+Wrzucic na fco/main bezposrednio - puscic run plan, spropagowac na srodowiska, 
+
+
+Please indicate the type of authority which has validated the freezing order, if applicable
+
+===============
+
+brak adresu dla sekcji n i m 
+FoValidatingAuthorityDetails  - rozszezyc o pole address 
+dodac do copy
+zmapowac w rest convertera
+
+
+$R{fo.annex.i.section.o.address.label} + ": " + $P{VALIDATING_AUTHORITY_DETAILS_ADDRESS_STREET_AND_NUMBER_PO_BOX}
+
+VALIDATING_AUTHORITY_DETAILS_ADDRESS_STREET_AND_NUMBER_PO_BOX - stworzyc parametr o tej nazwie w jasper
+
+
+VALIDATING_AUTHORITY_DETAILS_ADDRESS -> to bedzie na raporcie uzywane. 
+
+validatingAuthority - z tad wziazc address -> streetAndNumberOrPoBox
+
+ $P{CENTRAL_AUTHORITY_DETAILS_ADDRESS_STREET_AND_NUMBER_PO_BOX}
+ 
+ 
+ VALIDATING_AUTHORITY_DETAILS_
+ $P{ISSUING_AUTHORITY_DETAILS_ADDRESS_STREET_AND_NUMBER_PO_BOX}
+ 
+

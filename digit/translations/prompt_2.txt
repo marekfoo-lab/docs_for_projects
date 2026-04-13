@@ -1,0 +1,19 @@
+Mam tekst w jezyk angielski w pliku en_1.txt. Wszystko co tam sie znajduje pochodzi z pliku CELEX_32018R1805_EN_TXT.txt
+Potrzebuje przetlumaczyc tekst z pliku en_1.txt na jezyk Ungarisch z ograniczeniami typu:
+- struktura en_1.txt to typowy plik properties, czyli klucz i wartosc np: fo.annex.i.common.yes.label=Yes. Tlumaczysz tylko wartosc, w tym przykladzie tylko Yes.
+- wszystkie tlumaczenia moga pochodzic tylko z pliku CELEX_32018R1805_HU_TXT.txt, ktory zawiera jezyk Ungarisch
+- Struktura pliku CELEX_32018R1805_EN_TXT.txt oraz CELEX_32018R1805_HU_TXT.txt jest taka sama, roznia sie tylko jezykiem.
+– wazne, kodowanie: native2ascii (\uXXXX).
+– Styl: oficjalny, prawniczy, zgodny z terminologią UE.
+- NIE modernizuj języka.
+- Jedna linia wejścia = jedna linia wyjścia.
+- Terminologia musi być spójna w całym pliku.
+- Jeśli zapis w źródle wygląda nienaturalnie – zachowaj go.
+– Jeśli tekst jest długi, tłumacz maksymalny możliwy zakres.
+– NIE zadawaj pytań.
+- Wynik tlumaczenia zapisz do okienka czatu.
+- wyniki to maja byc linie zawierajace klucz i wartosc, np. fo.annex.i.common.yes.label=Ano
+- liczba lini z pliku en_1.txt musi odpowiadac liczbe lini ktore wygenerujesz do okienka czata, nic wiecej
+- plik en_1.txt przeczytaj jeszcze raz, rob to zawsze, jego zawartosc sie zmienia
+- jesli wersja angielska nie zawiera na koncu tlumaczenia znaku : to nie dodawaj go do wersji Ungarisch
+- Amazon Q can't compact history instead
