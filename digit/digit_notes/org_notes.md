@@ -40,6 +40,23 @@ Presails - do 18.03.
 Od 19.03 - wbs Immieny i w Carole 
 BONACINI Stefania -> do edycji Carole. 
 
+## Ares
+
+Doc+
+list -> Eviden, drugi z listy
+Title: Timesheet and Activity Report - March 2026 - Marek Furmaniak
+Attach - 2 timeshit i SAVE!
+Nastepnie: E-Signatory -> Create button
+Z listy: Sign -> FURMANIAK Marek (JUST.H.4.004)
+Z listy: Sign -> Bonacini Stefiania (JUST.H.4.003)
+Z listy: Sign -> SERBAN Dragos (JUST.H.4.003)
+Z listy: Exp -> ve_just.h.4 
+Save and Launch
+Nastepnie 
+My to-do task: Button Sign - trzeba podpisac -> Button Sign
+
+ESS == Carole - ilosc musi sie zgadzac
+
 ## Teams
 Aneta - moze wie jak podlaczyc teamsa i poczte atosowa - jest mozliwe
 dawid baldo - gael - Liencja Intelj - AI Assistent - nie ma zbyt duzo tokenow - 
