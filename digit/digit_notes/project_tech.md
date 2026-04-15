@@ -5,7 +5,7 @@ https://intragate.ec.europa.eu/jasspr/project_view.php?username=LUNGUEM&number=I
 
 ## Get to Know
 
-### Jak wygenerowac API do HTML 
+### Jak wygenerowac API do HTML
 
 fco-public-api.yaml
 
@@ -17,33 +17,38 @@ https://citnet.tech.ec.europa.eu/CITnet/bamboo/browse/DEVEEV-FBB/
 
 ## Logs
 
-Access only from EC laptop 
+Access only from EC laptop
 
 ## MyDB
 
 MySql:admin/admin1234
 db:ri-case-dev-mf| ri-case-dev/ri-case-dev
 
-### Bazy developerskie i Testowe 
+### Bazy developerskie i Testowe
 dev
-IP 10.130.137.94 
+IP 10.130.137.94
 port: 3306
 username: eevidence
 pwd  
 schema_name ri_case_pl
 
 tst:
-IP 10.130.139.60 
+IP 10.130.139.60
 port 3306
-username: eevidence 
+username: eevidence
 pwd:  
-schema backend_pl 
+schema backend_pl
 
 3 bazy trzeba wspierac:
-- mariadb - 
-- mysql - 
+- mariadb -
+- mysql -
 
-### Cleanup 
+### Cleanup
+
+## SoapUI
+
+/home/furmama/app_dev/SmartBear/SoapUI-5.9.1/bin/SoapUI-5.9.1.vmoptions
+Np. -Dsun.java2d.uiScale=1.75 dla czegoś pomiędzy.
 
 ## Bruno
 
@@ -72,9 +77,9 @@ Puszczenie checkstyle na całym projekcie (bez User-repo, bo on nie dziedziczy p
 
 ### API
 
-Contract fist approach - From API to Code and DTO: 
+Contract fist approach - From API to Code and DTO:
 -DskipTests=true clean install -pl adapter/primary/rest -am -f pom.xml
-Generuje interface uzywane potem do Controlera aby miec polaczenie dokuemntacja kod 
+Generuje interface uzywane potem do Controlera aby miec polaczenie dokuemntacja kod
 fco-public-api.yaml - recznie pisany i na jego podstawie sa generowane typy generowane takie jak Intefrace dla Controllra oraz DTO's
 
 
@@ -87,14 +92,14 @@ user->internet
 
 Jak wprowadzic dane do formularza aby zobaczyc jak sie zachowuje?
 Aby dodac pole do formularza, nalezy dodac jego zrodlo danych:
-- w odpowiednim dataset 
+- w odpowiednim dataset
 - dodac parameter name="CHECKBOX_CHECKED", wartosc z name jest uzywana w java do mapowania wartosci.
 
 Wysokosc pol - 20px
 Zero odstepow pomiedzy kontrolkami
 positionType="Float" dla  kind="frame" i kind="textField"
 
-## CI 
+## CI
 
 CI -> moze byc uruchomione recznie, nie trzeba twrzyc PR.
 
@@ -105,4 +110,6 @@ git push -u origin dev5/fco/feature/DEVEEV-XXX
 git branch -D nazwa_brancha
 git push origin --delete nazwa_brancha
 
+dev5/fco/feature/DEVEEV-7380_fo_annex_I_send_and_receive
 
+git push --force-with-lease
