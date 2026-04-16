@@ -103,6 +103,22 @@ positionType="Float" dla  kind="frame" i kind="textField"
 
 CI -> moze byc uruchomione recznie, nie trzeba twrzyc PR.
 
+## Gmail
+
+Instalacja i start mailhog:
+curl -L -o mailhog https://github.com/mailhog/MailHog/releases/download/v1.0.1/MailHog_linux_amd64
+chmod +x mailhog
+./mailhog
+
+Podmiana propetisow:
+spring.mail.host=localhost
+spring.mail.port=1025
+spring.mail.username=
+spring.mail.password=
+spring.mail.properties.mail.smtp.auth=false
+spring.mail.properties.mail.smtp.starttls.required=false
+spring.mail.properties.mail.starttls.enable=false
+
 ## GIT 
 git checkout -b dev5/fco/feature/DEVEEV-XXX
 git push -u origin dev5/fco/feature/DEVEEV-XXX
