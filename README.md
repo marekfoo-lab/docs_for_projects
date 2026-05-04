@@ -1,3 +1,12 @@
+wyslac kosztorys i podpisac umowe - 
+Viktor - dac nr. do Jaremki aby mogl wydac slupy 
+Malgosia - podpisac 
+Paczoski - umowa 
+Spotkanie w sebtrans - potem po podpisaniu wszystkich 
+
+
+
+
 Kompozyt:
 deski pełne (lite)
 co-extrusion (II generacja)
