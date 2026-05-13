@@ -1,8 +1,8 @@
-wyslac kosztorys i podpisac umowe - 
-Viktor - dac nr. do Jaremki aby mogl wydac slupy 
-Malgosia - podpisac 
-Paczoski - umowa 
-Spotkanie w sebtrans - potem po podpisaniu wszystkich 
+🇪🇺 Sour Bikes - Clueless - 1,1k/3,2k
+🇬🇧 Mason Cycles
+🇫🇷 Genesis:  Croix de Fer
+🇩🇰 Brother Cycles
+
 
 
 
