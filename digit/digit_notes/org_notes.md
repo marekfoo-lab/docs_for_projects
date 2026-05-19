@@ -48,14 +48,16 @@ Title: Timesheet and Activity Report - March 2026 - Marek Furmaniak
 Attach - 2 timeshit i SAVE!
 Nastepnie: E-Signatory -> Create button
 Z listy: Sign -> FURMANIAK Marek (JUST.H.4.004)
-Z listy: Sign -> Bonacini Stefiania (JUST.H.4.003)
-Z listy: Sign -> SERBAN Dragos (JUST.H.4.003)
-Z listy: Exp -> ve_just.h.4 
+Z listy: Sign -> Bonacini Stefiania (JUST.H.4.003)  oprocz Veronique + dgjustcontract@atos.net -> Operational Initiating Agent (OIA) – certified correct
+Z listy: Sign -> SERBAN Dragos (JUST.H.4.003) -> Operational Verifying Agent (OVA) – certified correct
+Z listy: Exp -> ve_just.h.4  -> Send signed timesheet to the company
 Save and Launch
 Nastepnie 
 My to-do task: Button Sign - trzeba podpisac -> Button Sign
 
 ESS == Carole - ilosc musi sie zgadzac
+
+April = just.h.4.004(2026)4947506
 
 ## Teams
 Aneta - moze wie jak podlaczyc teamsa i poczte atosowa - jest mozliwe

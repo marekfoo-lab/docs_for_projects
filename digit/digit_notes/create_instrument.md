@@ -42,5 +42,10 @@ t_co_annex_ii
 t_co_annex_ii_a
 t_co_annex_ii_b
 
+## Send Receive
+
+p-mode.xml
+Definiuje akcje dla operacji z domnibus, musza tu byc dodane.
+
 ==============
 Gdzie znajde REST API?

@@ -1,1 +1,4 @@
 /.idea/
+/.clj-kondo
+/.lsp
+/digit/xml/*

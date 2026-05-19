@@ -1,3 +1,60 @@
+type: object
+
+additionalProperties:
+
+  oneOf:
+
+    - type: boolean
+
+    - type: string
+ 
+type: object
+
+additionalProperties:
+
+  type:
+
+    - Boolean
+
+    - string
+ 
+ 
+ type: object
+additionalProperties:
+  type: object
+  additionalProperties:
+    oneOf:
+      - type: string
+      - type: boolean
+      - type: number
+ 
+ 
+ 
+additionalProperties:
+  oneOf:
+    - $ref: '#/components/schemas/FoInstrument'
+    - $ref: '#/components/schemas/TreeInstrument'
+    - $ref: '#/components/schemas/CarInstrument'
+ 
+ 
+   FoInstrument:
+      type: object
+      properties:
+        certifiedCopyNeeded:
+          type: boolean
+        certificateName:
+          type: string
+ 
+i taka bedzie zwrotka:
+Map<String, Map<String, Object>>
+ 
+gdzie klucz to instrument a wartosc mapa w ktrej klucz to nazwa porerty a value to wartosc parametru ktora jest tu zdefiniowanegow konfiguracji dla naszego przpadku Boolean i string na razie
+
+countries{countryId}/instrument{instrumentId}/properties
+
+============================================
+
+
 
 placeOfBirth
  .placeOfBirth(domain.getPlaceOfBirth().orElse(null))

@@ -23,7 +23,7 @@ FCO RI - Spring 9 - March 11 - 3 week.
 ## Workflow
 
 TASK != STAN - TO NIE JEST STAN!
-JAKE SA MOZLIWE WYJAC Z DANEGO TASKA
+JAKE SA MOZLIWE STANY TO MOZNA WYJAC Z DANEGO TASKA
 STAN MOZE WYNIKAC Z WYKONANIA TASKA
 STAN: DRAFT, COMPLETED, POSITIVELY REVIEWD...
 
@@ -62,6 +62,30 @@ User wykonuje taski, a to czesto ale nie zawsze prowadzi do wynikowego stanu na 
 
 Task jest zwiazany z Formularzem
 Task leci do glownego formularza
+
+CoWorkflowState (core/shared-kernel) — CO czym jest formularz (stan biznesowy)
+Opisuje w jakim stanie jest cały instrument CO z perspektywy domeny. zawiera pełny cykl życia instrumentu CO, włącznie ze stanami po stronie odbierającej i stanami końcowymi.
+Stany: DRAFT → REVIEW_READY → REVIEWED → SIGN_READY → SIGNED → ISSUED → RECEIVED → CLOSED / REJECTED / WITHDRAWN / DELETED
+Używa wzorca Visitor — wymusza obsługę każdego stanu w kodzie domenowym
+Jest w shared-kernel — widoczny dla całej aplikacji (core, adaptery, REST)
+
+CoBusinessProcessElementDef (adapter/workflow) — JAK przechodzić między stanami (definicja procesu)
+Opisuje kroki workflow engine (taski, przejścia, role)
+Definiuje kto może co zrobić: AUTHOR wypełnia, REVIEWER recenzuje, SENDER wysyła
+Jest w adapterze — to szczegół implementacyjny silnika workflow.
+Definiuje tylko flow tworzenia i wysyłania ANNEX II (COMPLETE → REVIEW → PREPARE_FOR_SIGNATURE)
+
+
+Krótko:
+CoWorkflowState = co (stan formularza widoczny w UI i domenie). Info o wszystkich stanach (11 stanów)
+CoBusinessProcessElementDef = jak - definiuje tylko taski workflow dla flow ANNEX II (COMPLETE → REVIEW → PREPARE_FOR_SIGNATURE → END) (i przejść w silniku workflow)
+CoAnnexIIWorkflowState = podzbiór 7 stanów CO (mapowany na CoWorkflowState) specyficzny dla formularza ANNEX II (bez RECEIVED, CLOSED, WITHDRAWN, DELETED — bo te dotyczą strony odbierającej), używany przez silnik workflow
+Co.java (encja domenowa) — bezpośrednio ustawia stany "pozaprocesowe" (RECEIVED, CLOSED, WITHDRAWN, DELETED) w swoich metodach
+
+Silnik workflow wykonuje taski z CoBusinessProcessElementDef, a po każdym przejściu aktualizuje CoWorkflowState / CoAnnexIIWorkflowState na encji domenowej.
+
+
+
 
 ## Stworzenie Instrumentu
 
