@@ -1,3 +1,5 @@
+pawel kedzia - pm - zglosic sie do niego z CV
+
 Secure digital platform developed under the EU e-Evidence Regulation to enable law enforcement and judicial authorities to request and exchange electronic evidence directly from service providers across the EU. 
 
 
