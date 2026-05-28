@@ -9,7 +9,7 @@ Secure digital platform developed under the EU e-Evidence Regulation to enable l
 🇩🇰 Brother Cycles
 
 
-
+obręcze: Light Bicycle / Nextie (25 mm internal)
 
 
 Kompozyt:
