@@ -9,8 +9,14 @@ Secure digital platform developed under the EU e-Evidence Regulation to enable l
 🇩🇰 Brother Cycles
 
 
-obręcze: Light Bicycle / Nextie (25 mm internal)
-
+Obrecz: Light Bicycle AR25 / WR25 - carbon
+internal: 25 mm
+wysokość: 28–35 mm
+Albo alu: DT GR531
+DT Swiss 350 (ratchet 36T albo 54T (dynamiczniejsze))
+Szprycha: Sapim CX-Ray, zaplot:  24/24, 2-cross
+opona: 40–45 mm Cisnienie: przód: ~1.6–1.8 bar - tył: ~1.8–2.0 bar
+Opona: Tufo Thundero 40 mm
 
 Kompozyt:
 deski pełne (lite)
