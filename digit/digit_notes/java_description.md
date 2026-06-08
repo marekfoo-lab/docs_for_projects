@@ -2,24 +2,46 @@
 
 ## Architecture
 
-
 - Adapter - primary - rest - > Warstwa zewnetrzna - Controller + InterfaceAPI — (PropertiesApiController) + Converter - REST ↔ DTO(PropertiesConverter)
-- core - port - primary -> Interface (GetProperty) - Interface use-caseow - query/execute - Kontrakt pomiedzy warstwa adapter primary a warstwa application.
-- core - application -> Service/Handlery/Usecase - implementacja portow primary (PropertyServiceImpl). Brak requl biznesowych - tylko orkiestracja wywolan do domey i portow secondary. Rowniez konwertery domenowe, fasady instrumentow.
-- core - port - secondary -> Interface do infrastructure takiej jak:repository, file-store, email-sender, message-sender, workflow. Application zna tylko te interface. (InstrumentPropertiesProvider) ?
-- core - domain - Domena - encje domenowe z logika biznesowa/metodami biznesowymi (FOAnnexI) oraz ich Factory i value objects. Nie zalezy od niczego zewnetrznego!
-- adapter - secondary - Adaptery wyjsciowe - Implementacja repository-jpa, file-store, email-sender, domibus.
+- core - port - primary -> Interface (GetProperty) - Interface use-caseow - query/execute - Kontrakt pomiedzy warstwa adapter primary a warstwa application.  Kontroler wywołuje te interfejsy, nie zna implementacji.
+- core - application -> Warstwa aplikacji (handlery/use-case'y) (PropertyServiceImpl) - implementacje portow (CreateFoDecisionHandler), handlery (logika orkiestracji), konwertery domenowe, fasady instrumentów (FoCaseFacade), wywołania do domeny i portów secondary. Nie ma tu reguł biznesowych — tylko orkiestracja. Orkiestracja w core/application oznacza koordynowanie wywołań między różnymi komponentami (domena, porty secondary, inne serwisy) w celu realizacji jednego use-case'u. Handler w warstwie application nie zawiera logiki biznesowej — on jedynie:
+    - Pobiera dane (z repozytorium)
+    - Wywołuje logikę na encji domenowej
+    - Zapisuje wynik
+    - Ewentualnie wywołuje efekty uboczne (wysyłka wiadomości, notyfikacje)
+    
+- core - port - secondary ->  Porty wyjściowe (interfejsy do infrastruktury) - interfejsy repozytoriów (FoDecisionRepository), interfejsy do wysyłki maili, plików, tłumaczeń. Application zna tylko te interfejsy.
+- core - domain - Domena (rdzeń) - Encje domenowe z logiką biznesową: FoAnnexI, value objects, factory. Od niczego nie zalezy.
+- core/shared-kernel — współdzielone value objects (np. FormId, MessageType)
+- adapter/secondary - Adaptery wyjściowe (implementacje portów secondary) - Implementacje portów secondary: repository-jpa (JPA/Hibernate), file-store, email-sender. Tu sa klasy JPA (repozytoria Spring Data), klienty HTTP do zewnętrznych serwisów, implementacje wysyłki maili.
+- adapter/primary-secondary (np. workflow, domibus) — adaptery pełniące obie role jednocześnie
+- integration - service-starter - adapter -> Spring Boot starter łączący wszystko w runtime - Impl (InstrumentPropertiesProviderImpl)
 
 Dodatkowo:
 - core- shared-kernel - wspoldzielone value objects (FormId, MessageType)
 - adapter - primary-secondary - adaptery pelniace obie role jednoczesnie - workflow, domibus. 
 - integration - service-starter - Springboot laczacy wszystko w runtime.
 
-Zależności wskazują zawsze do środka:
+ZASADA ZALEZNOSCI: Zależności wskazują zawsze do środka:
 - adapter/primary → zależy od core/port/primary
 - core/application → zależy od core/port/primary + core/port/secondary + core/domain
 - adapter/secondary → zależy od core/port/secondary
 - core/domain → nie zależy od niczego (czysta Java)
+
+## FoCaseFacade
+
+Fasada instrumentu pełni rolę centralnego punktu koordynacji dla danego instrumentu prawnego. Jest to implementacja wzorca Facade w warstwie application, która:
+
+1. Agreguje operacje specyficzne dla instrumentu
+2. Rejestruje się w Registry (Strategy pattern) -> registry.register(getInstrument(), this);
+3. Definiuje kontrakt "co instrument potrafi"
+4. Waliduje kompletność przy starcie
+
+Fasada jest więc adapterem wewnętrznym — pozwala generycznej logice (wysyłanie wiadomości, tworzenie spraw) działać polimorficznie bez znajomości szczegółów konkretnego instrumentu.
+
+## Java Main types
+
+FormType 
 
 ## Java types
 

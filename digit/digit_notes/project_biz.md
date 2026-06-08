@@ -20,6 +20,13 @@ EIO and EPOC - been took
 
 FCO RI - Spring 9 - March 11 - 3 week.
 
+## Sending case
+
+1. (PL) Bruno - workflow -> send
+2. SoapUI - Domnibuss Connector -> copy ContentXML & backendMessageId
+3. (CZ) SoapUI - fo_annexI -> paste ContentXML & backendMessageId
+4. (PL) SoapUI - DeliveryToRecipient -> backendMessageId
+ 
 ## Workflow
 
 TASK != STAN - TO NIE JEST STAN!

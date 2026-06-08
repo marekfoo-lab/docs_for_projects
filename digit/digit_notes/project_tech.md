@@ -56,6 +56,22 @@ CREATE SCHEMA `ri-case-dev-mf` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 t_fo_decision_main -> t_fo_decision -> t_form_data
 
+
+t_fo_follow_up_decision_main -> t_fo_follow_up_decision -> t_form_data  -> t_legal_case
+                                t_fo_follow_up_decision -> t_fo_annex_i
+
+t_fo_decision_main -> t_fo_decision ->   t_form_data
+                              t_fo_decision ->   t_fo_annex_i
+                                                 t_fo_annex_i -> t_form_data
+                              t_fo_withdrawal -> t_form_data
+
+t_workflow_task -> t_workflow -> t_legal_case
+                                      -> t_message -> t_legal_case
+                                      -> t_form_data
+t_free_form -> t_form_data -> t_legal_case        
+
+
+
 ## SoapUI
 
 /home/furmama/app_dev/SmartBear/SoapUI-5.9.1/bin/SoapUI-5.9.1.vmoptions
@@ -136,16 +152,17 @@ spring.mail.properties.mail.smtp.starttls.required=false
 spring.mail.properties.mail.starttls.enable=false
 
 ## GIT 
-git checkout -b dev5/fco/feature/DEVEEV-8132-freezing-follow-up-be
-git push -u origin dev5/fco/feature/DEVEEV-8132-freezing-follow-up-be
+git checkout -b dev5/fco/feature/DEVEEV-8208-due-dates-are-not-shown-be
+git push -u origin dev5/fco/feature/DEVEEV-8208-due-dates-are-not-shown-be
 
-git branch -D nazwa_brancha
-git push origin --delete nazwa_brancha
+git branch -D dev5/fco/feature/DEVEEV-8208-due-dates-are-not-shown-bee
+git push origin --delete dev5/fco/feature/DEVEEV-8208-due-dates-are-not-shown-bee
 
 
 git push --force-with-lease
 
 git reset --hard origin/dev5/fco/feature/DEVEEV-7380_fo_annex_I_send_and_receive
+git reset --hard origin/dev5/fco/main
 
 git checkout -b dev5/fco/main
 git push -u origin dev5/fco/main
