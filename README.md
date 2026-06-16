@@ -1,5 +1,8 @@
 pawel kedzia - pm - zglosic sie do niego z CV
 
+Wizz Air jako przewoźnik low‑cost nie wystawia odrębnego dokumentu „travel itinerary”.
+Załączone potwierdzenie rezerwacji (confirmation email) oraz boarding passes zawierają wszystkie wymagane informacje dotyczące podróży i stanowią równoważny dokument.
+
 Secure digital platform developed under the EU e-Evidence Regulation to enable law enforcement and judicial authorities to request and exchange electronic evidence directly from service providers across the EU. 
 
 
