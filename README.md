@@ -1,7 +1,15 @@
 pawel kedzia - pm - zglosic sie do niego z CV
 
-Wizz Air jako przewoźnik low‑cost nie wystawia odrębnego dokumentu „travel itinerary”.
-Załączone potwierdzenie rezerwacji (confirmation email) oraz boarding passes zawierają wszystkie wymagane informacje dotyczące podróży i stanowią równoważny dokument.
+Piotr Samorajski - 795 587 948
+Ep - 85,78
+Swiadectwo charakterystyki energetycznej
+bialowieska 99/7
+400zl - 
+Wnioski do 4 dni musza byc podpisane - a potem 14 dni na reszte dokumentow. 
+
+sche/1925/23/2021
+2031/04/12
+
 
 Secure digital platform developed under the EU e-Evidence Regulation to enable law enforcement and judicial authorities to request and exchange electronic evidence directly from service providers across the EU. 
 
