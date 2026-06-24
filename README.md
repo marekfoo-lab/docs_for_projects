@@ -1,5 +1,7 @@
 pawel kedzia - pm - zglosic sie do niego z CV
 
+GOREWEAR Glidewheel GORE-TEX Jacket Men
+
 Piotr Samorajski - 795 587 948
 Ep - 85,78
 Swiadectwo charakterystyki energetycznej
