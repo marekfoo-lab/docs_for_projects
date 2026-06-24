@@ -1,6 +1,6 @@
 pawel kedzia - pm - zglosic sie do niego z CV
 
-GOREWEAR Glidewheel GORE-TEX Jacket Men
+Concurve Gore-tex
 
 Piotr Samorajski - 795 587 948
 Ep - 85,78
