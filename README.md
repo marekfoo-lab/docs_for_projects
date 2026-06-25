@@ -1,3 +1,29 @@
+Dubaj:
+- czy trzeba miec wizy - Wiza / wjazd – Polacy dostają visa on arrival (bez problemu)
+- hotel przy lotnisku - Centro Sharjah – często używany na layover
+- hotel na day-use (basen + prysznic)
+- do 12 - spacer przy Dubai Fountain kawa / śniadanie
+- do 12 - Dubai Marina / JBR (bardziej spacerowo, nad wodą)
+- po 12 - Dubai Mall (ogromne centrum handlowe + klimatyzacja)
+Sarjah:
+- Al Noor Island – krótki spacer - 1,5–2h
+- Al Noor Mosque (z zewnątrz albo tour - do sprawdzenia) - 30–45 min
+- Spacer nad Khalid Lagoon - bardzo przyjemna promenada
+- Sharjah Aquarium - 1–1,5h - chlodno
+- 10:30–15:30 - ARRAKIS - Sahara Centre / City Centre Al Zahia
+- realistycznie: wybierz 1 muzeum + mall na jedzenie
+- Al Majaz Waterfront - promenada + knajpy - 1,5–2h
+- 18:30–19:00 – powrót na lotnisko - Sharjah ma ruch
+
+Koszty:
+taxi po mieście: 10–30 AED
+Al Noor Island: ~50 AED
+muzea: ~10–20 AED
+jedzenie: 30–80 AED
+
+
+-----------------------------------------------------------------------------
+
 pawel kedzia - pm - zglosic sie do niego z CV
 
 Concurve Gore-tex
