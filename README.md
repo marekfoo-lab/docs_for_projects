@@ -15,6 +15,10 @@ Sarjah:
 - Al Majaz Waterfront - promenada + knajpy - 1,5–2h
 - 18:30–19:00 – powrót na lotnisko - Sharjah ma ruch
 
+👉 Rano: Al Noor Island + meczet + spacer
+👉 Południe: muzeum / mall (bo gorąco)
+👉 Wieczór: Al Majaz Waterfront + kolacja
+
 Koszty:
 taxi po mieście: 10–30 AED
 Al Noor Island: ~50 AED
