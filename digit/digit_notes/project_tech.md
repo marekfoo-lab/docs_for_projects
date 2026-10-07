@@ -9,6 +9,11 @@ https://intragate.ec.europa.eu/jasspr/project_view.php?username=LUNGUEM&number=I
 
 application.signedPdfValidationOn=false -> true gdy testuje podpisane cyfrowo pdf a false przyjmnie kazdy.
 
+logging.level.org.hibernate.SQL=debug
+logging.level.org.hibernate.orm.jdbc.bind=trace
+spring.jpa.properties.hibernate.format_sql=true
+spring.jpa.properties.hibernate.show_sql=false
+
 ### Jak wygenerowac API do HTML
 
 fco-public-api.yaml
@@ -85,6 +90,11 @@ Np. -Dsun.java2d.uiScale=1.75 dla czegoś pomiędzy.
   - authorityCtx - zmienna def. authority: ca-civ-1 albo ca-cri-1
   - userlogin - user dla authority: civ1_all_1 albo cri1_all_1
 
+
+  Import collection from repository to your home location like 
+  /home/furmama/Documents/bruno/name_of_collection
+  When changes done, export it to your repository location  
+
 ## Intellij
 
 dodac plik env_settings.env do startup aby zaladowal wszystkie zmienne srodowiskowe.
@@ -95,6 +105,23 @@ Intelij:
 - crt+alt+u - pokazuje diagram
 - crt+t - update repo
 - crt+shift+u - tu uppercase
+
+To send message:
+- run case-service in PL mode
+- start mock in SoapUI
+- Bruno -> execute workflow 
+- Copy xmlContent from SoapuUI Mock to request ri API/FO-AnnexI
+- stop case-service in PL mode and start in CZ mode
+- sent request ri API/FO-AnnexI
+
+Fix drivers:
+Dodaj do integration/service-starter/pom.xml:
+<dependency>
+  <groupId>com.mysql</groupId>
+  <artifactId>mysql-connector-j</artifactId>
+  <scope>${db.drivers.scope}</scope>
+</dependency>
+
 
 ## Maven
 
@@ -131,6 +158,9 @@ Wysokosc pol - 20px
 Zero odstepow pomiedzy kontrolkami
 positionType="Float" dla  kind="frame" i kind="textField"
 
+SplitType Immediate dla wszystkich Details (zaznaczyc w Outline i zmienic wartosc)
+Dla TextFiled -> Advanced -> Text Properties -> Vertical Alignment -> Inherited | Markup -> html
+
 ## CI
 
 CI -> moze byc uruchomione recznie, nie trzeba twrzyc PR.
@@ -161,7 +191,7 @@ git push origin --delete dev5/fco/feature/DEVEEV-8208-due-dates-are-not-shown-be
 
 git push --force-with-lease
 
-git reset --hard origin/dev5/fco/feature/DEVEEV-7380_fo_annex_I_send_and_receive
+git reset --hard origin/dev5/fco/feature/DEVEEV-0000_POC_translation_modul_new_xsd
 git reset --hard origin/dev5/fco/main
 
 git checkout -b dev5/fco/main

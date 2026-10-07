@@ -28,6 +28,16 @@ ZASADA ZALEZNOSCI: Zależności wskazują zawsze do środka:
 - adapter/secondary → zależy od core/port/secondary
 - core/domain → nie zależy od niczego (czysta Java)
 
+## Smaczki
+
+private List<UserNotification> getUserNotifications(UserSid userSid, Page page) {
+        Pageable pageable = page == null
+            ? Pageable.unpaged() : PageRequest.of(page.getPageNumber(), page.getPageSize());
+        return userNotificationStorage.findNotificationByUserIdAndUserAuthorityId(
+                userSid.getUserId().idToString(), userSid.getAuthorityId().getId(), pageable).stream()
+
+AuditLog
+
 ## FoCaseFacade
 
 Fasada instrumentu pełni rolę centralnego punktu koordynacji dla danego instrumentu prawnego. Jest to implementacja wzorca Facade w warstwie application, która:
@@ -55,6 +65,9 @@ C:\git\e-evidence-ri-backend-case-service\core\schema\src\main\resources\xsd\FCO
 
 application.xsd.eio.annexA
 
+## ACL 
+
+MutableAclService
 
 ## Raporty
 
@@ -191,3 +204,29 @@ Instrument.FO
             │
             ├── workflowState: FoAnnexIWorkflowState (DRAFT→...→ISSUED)
             └── taskCompleted(FoAnnexITask, TaskOutput)
+
+
+MessageType: 
+Modeluje wszystkie typy wiadomości (komunikatów) wymieniane między organami sprawiedliwości.
+Sklada sie z: 
+- FormType formType — typ formularza powiązany z danym komunikatem (np. ANNEX_A, FREE_FORM, EPOC_FORM_1)
+- Set<Instrument> instruments — zbiór instrumentów prawnych, w ramach których ten typ wiadomości jest dozwolony (np. EIO, MLA, EPOC, SOD, TOE, itd.)
+
+Zastosowanie:
+Routingu wiadomości — decyduje, który workflow/handler obsłuży przychodzącą wiadomość
+Walidacji — sprawdza, czy dany typ wiadomości jest dozwolony w kontekście instrumentu
+Mapowania na formularze — wiąże typ wiadomości z konkretnym formularzem UI/XML
+Logiki biznesowej via Visitor — każdy use case implementuje Visitor i definiuje zachowanie per typ wiadomości (np. generowanie PDF, wysyłka przez Domibus, walidacja)
+
+
+Relacja MessageType → FormType to wiele-do-jednego
+
+MessageType opisuje kontekst biznesowy komunikatu — co oznacza ta wiadomość w procesie (np. amendment, notyfikacja, forward)
+FormType opisuje strukturę/formularz — jaki szablon danych jest używany do wyrenderowania/walidacji
+
+Czy sa jakies stale FormType ktore sa nadmiarowe i moznaby je usunac i zastapic innymi stalymi? => NIE
+FormType jest zaprojektowany jako 1:1 z dokumentami/formularzami prawnymi. Każda stała ma unikalne zachowanie via Visitor i unikalny zestaw instrumentów. Usunięcie którejkolwiek złamałoby kontrakt Visitora i uniemożliwiło rozróżnianie formularzy tam, gdzie jest to potrzebne.
+
+
+Czy sa jakies stale MessageType ktore sa nadmiarowe i moznaby je usunac i zastapic innymi stalymi? => NIE
+enum MessageType nie ma nadmiarowych stałych. Każda stała reprezentuje odrębny typ komunikatu prawnego i jest rozróżniana w co najmniej jednym miejscu systemu.

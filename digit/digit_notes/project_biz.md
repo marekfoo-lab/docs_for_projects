@@ -92,11 +92,15 @@ Co.java (encja domenowa) — bezpośrednio ustawia stany "pozaprocesowe" (RECEIV
 Silnik workflow wykonuje taski z CoBusinessProcessElementDef, a po każdym przejściu aktualizuje CoWorkflowState / CoAnnexIIWorkflowState na encji domenowej.
 
 
-
-
 ## Stworzenie Instrumentu
 
 ### Terminy
+
+FreeForm ma tez subtype ktory defniniuje znaczenie biznesowe 
+tabela FormData jest parentem formularzy 
+
+eds - kazdy formularz jest w nim osadzany
+Nowe podejscie bedzie inne, uzyty header.
 
 Case - to sprawa sadow, cos o charakterze prawnym, ktory musi przejsc przez workflow.
 Moze reporezentowac 1 i tylko 1 z instrumentow. Czyli np. Co - confiscate order
@@ -106,7 +110,6 @@ globalCaseId - klucz unikalny, w skali globalnej, (Klasa LegalCase), mniej uzywa
 
 Formularze - np. AnnnexII dla CO, ktory zawiera Sekcje A,B,C,D. Case (LegalCase) moze zawierac wiele formularzy.
 formId  - klucz formularza (format jak caseid) - w JSON: currentForm/formid
-
 
 Task - stany przez ktore przechodzi kazdy formularz.
 
@@ -196,6 +199,7 @@ Formularz - > Review -> Signed -> To Send
 
 2. Najpierw tworzy formularz, przechodzi review, jest podpisywany i dopiero moze byc wyslany
    Zwrocic uwage na validation check -> czyli pola ktore nalezy wypelnic aby przejsc dalej
+
 
 ## Problems
 
